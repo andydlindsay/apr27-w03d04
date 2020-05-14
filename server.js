@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 // const cookieParser = require('cookie-parser');
 const cookieSession = require('cookie-session');
 const bcrypt = require('bcryptjs');
+const methodOverride = require('method-override');
 
 const app = express();
 const port = process.env.PORT || 9876;
@@ -16,6 +17,14 @@ app.use(cookieSession({
 }));
 app.use(morgan('dev'));
 app.use(express.static('public'));
+app.use(methodOverride('_method'));
+
+// custom middleware
+app.use((req, res, next) => {
+  const time = Date.now();
+  console.log(`request came through at ${time}`);
+  next();
+});
 
 app.set('view engine', 'ejs');
 
@@ -54,7 +63,7 @@ app.get('*', (req, res) => {
   res.redirect('/login');
 });
 
-app.post('/login', (req, res) => {
+app.put('/login', (req, res) => {
   const username = req.body.username;
   const password = req.body.password;
 
