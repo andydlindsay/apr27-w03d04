@@ -4,10 +4,10 @@
 - [ ] Storing passwords
 - [ ] Encrypted cookies
 - [ ] HTTP Secure (HTTPS)
-- [ ] RESTful Routes
-- [ ] Alternatives to ExpressJS
-- [ ] Express Middleware
+- [ ] REST
 - [ ] More HTTP methods
 - [ ] Method Override
+- [ ] Express Middleware
 - [ ] Modular Routing
 - [ ] JSON API's
+- [ ] Alternatives to ExpressJS
