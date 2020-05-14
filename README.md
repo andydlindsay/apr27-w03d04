@@ -1,9 +1,9 @@
 # W3D4 Security & Real World HTTP Servers
 
 ### To Do
-- [ ] Storing passwords
-- [ ] Encrypted cookies
-- [ ] HTTP Secure (HTTPS)
+- [x] Storing passwords
+- [x] Encrypted cookies
+- [x] HTTP Secure (HTTPS)
 - [ ] REST
 - [ ] More HTTP methods
 - [ ] Method Override
